@@ -20,11 +20,25 @@ body {
   font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
-
+#wrapper {
+  width: 100%;
+}
 /*h1,
 h2 {
   font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
 }*/
+
+button {
+  background: blue/*#dae1e4*/;
+  border: none;
+  border-radius: 5px;
+  color: white/*#1d3c6a*/;
+  font-size: 20px;
+  width: 300px;
+  padding: 10px 0;
+  margin: -40px -20px;
+  outline: none;
+  cursor: pointer;}
 
 h1 {  
   font-size: 1.5rem; /* 90px/16px  */
@@ -43,13 +57,19 @@ h2 {
   font-weight: normal;
   line-height: 1.1;
   margin: 0 0 .5em; /* 0 0 26px */
-  padding: 0px 15px;
+  padding: 20px 15px;
+  border:50px;  /* this is new */
+  
 
-  /*display: inline-block;
+    /*display: inline-block;
   font-size: 3.3125em; /* 53px/16px  
   font-weight: normal;
   line-height: 1.1;
   margin: 0 0 .5em; *//* 0 0 26px */
+}
+
+h2:hover{
+  color: blue;
 }
 
 h3 {
@@ -86,8 +106,9 @@ a:visited {
 }
 
 a:hover {
-  color: rgba(255, 169, 73, .4);
+  color: blue;/*rgba(255, 169, 73, .4);*/
 }
+
 
 a:active {
   color: lightcoral;
@@ -98,11 +119,14 @@ a:active {
 .main-header {
   padding-top: 10px;
   height: 150px;
+
   /*background: linear-gradient(#ffa949, transparent 90%),
               linear-gradient(0deg, #fff, transparent),
               #ffa949 url('../img/mountains.jpg') no-repeat center;*/
   background-size: cover;
-  background: blue;
+}
+  #wrapper {
+  background-image: url(../'img.mountains.jpg')/*blue*/;
 }
 
 .title {
@@ -112,7 +136,7 @@ a:active {
   font-weight: 200;
   border-bottom: 2px solid;
   padding-bottom: 10px;
-  background:white;
+  /*background:white;*/
 }
 
 
@@ -120,6 +144,7 @@ a:active {
   font-size: 2rem; /* 20px/16px */
   line-height: 1.6; 
   text-align:center; /* this is new*/
+  padding-top: 40px; /* this is new*/
 }
 
 .primary-content,
@@ -131,7 +156,8 @@ a:active {
 .primary-content {
 	padding-top: 25px;
   padding-bottom: 95px;
-  background:green;
+  /*background:green;*/
+  background-image: url(../'img.mountains.jpg');
 }
 
 .secondary-content {
@@ -165,7 +191,8 @@ a:active {
 /* Layout Styles ------------------ */
 
 .primary-content, 
-.secondary-content {
+.secondary-content
+ {
   width: 75%;
   padding-left: 50px;
   padding-right: 50px;
@@ -190,6 +217,20 @@ text-align:center; }
 background:pink;
 text-align:center;
   }
+
+.spoiler {
+  background: #1d3c6a;
+  /*width: 440px; */
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 24px
+}
+.spoiler span {
+  color: #dae1e4;
+}
+
 /* Turning this part off is critical to the links going across versus down
 
   padding: 18% 24%;
@@ -209,6 +250,22 @@ text-align:center;
 }*/
 
 /* Floated Columns ------------------ */
+
+.excite li {
+  text-align:left;
+}
+
+.excite p {
+  text-align:left;
+}
+
+.prep li {
+  text-align:left;
+}
+
+.prep p {
+  text-align:left;
+}
 
 .excite,
 .prep {
@@ -237,10 +294,12 @@ text-align:center;
 
 @media (max-width: 1024px) {
   .primary-content,
-  .secondary-content {
-    width: 90%;
-  }
-  .choices {
+  .secondary-content,
+  .spoiler span,
+  
+    /*width: 90%;*/
+  .choices,
+  button {
     padding: 10% 12%;
     margin: 50px 0 20px;
   }
@@ -248,8 +307,10 @@ text-align:center;
 
 @media (max-width: 768px) {
   .primary-content,
-  .secondary-content {
-    width: 100%;
+  .secondary-content,
+  .spoiler span, 
+  button {
+   /* width: 100%; */
     padding: 20px;
     border-top: none;
   }
@@ -262,7 +323,7 @@ text-align:center;
     border: none;
   }
   span {                /*  was h1*/
-    font-size: 10rem;    /* was 5rem   */
+    font-size: 1rem;    /* was 5rem   */
     line-height: 1.1;
   }
   .arrow {

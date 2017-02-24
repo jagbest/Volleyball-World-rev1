@@ -17,7 +17,11 @@
 body {
   color:blue; /* was #878787*/
   margin: 0;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 "Helvetica Neue", bold, Helvetica, Arial, sans-serif;
+
+
+
+  }
 
 }
 #wrapper {
@@ -29,32 +33,35 @@ h2 {
 }*/
 
 button {
-  background: blue/*#dae1e4*/;
+ /* background: blue/*#dae1e4;*/
+ background:none;
   border: none;
-  border-radius: 5px;
-  color: white/*#1d3c6a*/;
-  font-size: 20px;
+  border-radius: 10px;
+  color: red/*#1d3c6a*/;
+  font-size: 30px;
   width: 300px;
   padding: 10px 0;
   margin: -40px -20px;
   outline: none;
-  cursor: pointer;}
+  cursor: pointer;
+  font-weight: bolder;
+}
 
 h1 {  
-  font-size: 1.5rem; /* 90px/16px  */
+  font-size: 2rem; /* 90px/16px  */
   color: black;
   /*text-transform: uppercase;*/
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.3; 
-  text-shadow: 0 1px 1px rgba(0,0,0,.8);
+  /*text-shadow: 0 1px 1px rgba(0,0,0,.8);*/
   margin: 12px 0 0;
-  background:white;
+  /*background:white;*/
 }
 
 h2 {
   display: inline-block;
-  font-size: 1em; /* 53px/16px  */
-  font-weight: normal;
+  font-size: 1.5em; /* 53px/16px  */
+  font-weight: bold;
   line-height: 1.1;
   margin: 0 0 .5em; /* 0 0 26px */
   padding: 20px 15px;
@@ -73,10 +80,16 @@ h2:hover{
 }
 
 h3 {
-  font-size: 1.25em; /* 20px/16px  */
-  color: #48525c;
+  font-size: 1.5em; /* 20px/16px  */
+  color: black/*#48525c*/;
   line-height: 1.2;
   margin-bottom: 1.7em; /* 34px */
+  font-weight: bolder;
+}
+
+p {
+font-size: 1.25em;
+
 }
 
 img {
@@ -87,7 +100,7 @@ img {
 
 ul,
 ol {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 li {
@@ -102,7 +115,7 @@ a:link {
 }
 
 a:visited {
-  color: lightblue;
+  color: blue;
 }
 
 a:hover {
@@ -118,22 +131,42 @@ a:active {
 
 .main-header {
   padding-top: 10px;
-  height: 150px;
-
+  height: 0px;
+  /*background:blue;*/
   /*background: linear-gradient(#ffa949, transparent 90%),
               linear-gradient(0deg, #fff, transparent),
               #ffa949 url('../img/mountains.jpg') no-repeat center;*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
+  
   #wrapper {
-  background-image: url(../'img.mountains.jpg')/*blue*/;
+    background: url('../img/volleyball2.jpg');
+     background-repeat: no-repeat;
+    background-position: center center;
+
+    /*background-attachment: fixed; this was commented out before*/
+    
+    background-size: cover;
+    width:100%;
+    width: auto;
+    height: auto;
+    opacity:0.6;
+
+    /* this was commented out before 100% no-repeat;
+    opacity:0.6;
+    background-size: cover;
+    width: auto;
+    height: auto;
+
+              /*linear-gradient(0deg, #fff, transparent);*/
+              /*background-image: url(../'img.mountains.jpg')/*blue*/
 }
 
 .title {
   color: black;
   font-size: 3rem; /* 26px/16px */
   letter-spacing: .065em;
-  font-weight: 200;
+  font-weight: bolder;
   border-bottom: 2px solid;
   padding-bottom: 10px;
   /*background:white;*/
@@ -142,9 +175,10 @@ a:active {
 
 .intro {
   font-size: 2rem; /* 20px/16px */
+  font-weight: bolder;
   line-height: 1.6; 
   text-align:center; /* this is new*/
-  padding-top: 40px; /* this is new*/
+  padding-top: 0px; /* this is new*/
 }
 
 .primary-content,
@@ -156,15 +190,17 @@ a:active {
 .primary-content {
 	padding-top: 25px;
   padding-bottom: 95px;
+  color:black;
+  font-weight: bolder;
   /*background:green;*/
-  background-image: url(../'img.mountains.jpg');
+  /*background: url('../img/mountains.jpg') 100% no-repeat;*/
 }
 
 .secondary-content {
 	padding-top: 80px;
 	padding-bottom: 70px;
   border-bottom: 2px solid #dfe2e6;
-
+  /*background: url('../img/mountains.jpg') 100% no-repeat;*/
 }
 
 .callout {
@@ -176,15 +212,16 @@ a:active {
 }
 
 .main-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 10px solid #ffa949;
-  background:green;
+  background:lightgray;
 }
 
 .t-border {
-  border-top: 2px solid #dfe2e6;
+  /*border-top: 2px solid blue/*#dfe2e6*/;*/
   text-align: center; /* this is new*/
+
 
 }
 
@@ -193,7 +230,7 @@ a:active {
 .primary-content, 
 .secondary-content
  {
-  width: 75%;
+  /*width: 75%;*/
   padding-left: 50px;
   padding-right: 50px;
   margin: auto;
@@ -201,34 +238,44 @@ a:active {
 }
 
 .secondary-content {
-background:tomato;}
+/*background:tomato;*/}
 
 .choices {
   color: black;
   text-align: center;
-  padding: 0% 25%;
-  background:red;}
+  padding: 6% 15%;
+  /*border-radius: 10px;*/
+  /*background:red;*/}
 
 .excite {
-background:pink; 
-text-align:center; }
+background:lightgray;
+text-align:center;
+border-radius: 10px;
+
+}
 
 .prep{
-background:pink;
+background:lightgray;
 text-align:center;
+border-radius: 10px;
+margin-right:10px;
   }
 
 .spoiler {
-  background: #1d3c6a;
+  /*background: #1d3c6a;*/
   /*width: 440px; */
-  margin: 0 auto 20px;
+  margin: 0 auto ; /*was 20px */
   border-radius: 5px;
-  padding: 40px 20px;
+  /*padding: 40px 20px;*/
   text-align: center;
   font-size: 24px
+  font-weight: bolder;
+  color:red;
 }
 .spoiler span {
-  color: #dae1e4;
+  font-size: 30px;
+  font-weight: bolder;
+  color:red;/*color: #dae1e4;*/
 }
 
 /* Turning this part off is critical to the links going across versus down
@@ -253,18 +300,29 @@ text-align:center;
 
 .excite li {
   text-align:left;
+  color:black;
+  font-weight:bold;
 }
 
 .excite p {
   text-align:left;
+  color:black;
+  font-weight:bold;
+  margin-left: 10px;
 }
 
 .prep li {
   text-align:left;
+  color:black;
+  font-weight:bold;
+  
 }
 
 .prep p {
   text-align:left;
+  color:black;
+  font-weight:bold;
+  margin-left: 10px;
 }
 
 .excite,
@@ -296,8 +354,8 @@ text-align:center;
   .primary-content,
   .secondary-content,
   .spoiler span,
-  
-    /*width: 90%;*/
+   /* {width: 90%;}*/
+
   .choices,
   button {
     padding: 10% 12%;
@@ -310,18 +368,30 @@ text-align:center;
   .secondary-content,
   .spoiler span, 
   button {
-   /* width: 100%; */
+    /*width: 100%;*/ 
     padding: 20px;
     border-top: none;
+    font-size: 1.5rem;
   }
   .main-header {
     max-height: 380px;
     padding: 50px 25px 0;
   }
   .title {
+    font-size: 2rem;
+    border: none;
+  }
+
+  h1 {
     font-size: 1.3rem;
     border: none;
   }
+
+   .choices {
+    font-size: .8rem;
+    border: none;
+  }
+
   span {                /*  was h1*/
     font-size: 1rem;    /* was 5rem   */
     line-height: 1.1;
@@ -329,14 +399,28 @@ text-align:center;
   .arrow {
     display: none;
   }
-  .intro {
-    font-size: 1rem;
+  .intro,.spoiler{
+    font-size: 1.5rem;
   }
   .excite,
   .prep {
     float: none;
-    width: 100%;
+    width: 100%;}
+    
+    /*height:100%;*/
+
+  .excite li,.prep li{
+    font-size:1rem;
   }
+
+  .excite p, .prep p {
+     font-size:1.5rem;
+  }
+
+  .excite h3, .prep h3 {
+     font-size:2rem;
+  }
+ 
   .main-footer {
     padding: 20px 0;
   }

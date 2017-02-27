@@ -1,0 +1,392 @@
+
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color:blue; 
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", bold, Helvetica, Arial, sans-serif;
+
+  }
+
+}
+#wrapper {
+  width: 100%;
+}
+
+
+button {
+ 
+ background:none;
+  border: none;
+  border-radius: 10px;
+  color: red;
+  font-size: 30px;
+  width: 60%;
+  padding: 10px 0;
+  margin: -40px -20px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+h1 {  
+  font-size: 2rem; 
+  color: black;
+  
+  font-weight: bold;
+  line-height: 1.3; 
+  
+  margin: 12px 0 0;
+  
+}
+
+h2 {
+  display: inline-block;
+  font-size: 1.5em; 
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 0 .5em; 
+  padding: 20px 15px;
+  border:50px;  
+}
+
+h2:hover{
+  color: blue;
+}
+
+h3 {
+  font-size: 1.5em; 
+  color: black;
+  line-height: 1.2;
+  margin-bottom: 1.7em; 
+  font-weight: bolder;
+}
+
+p {
+font-size: 1.25em;
+
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+ul,
+ol {
+  margin: 10px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  padding-top: 10px;
+  height: 0px;
+  
+}
+  
+  #wrapper {
+    background: url('../img/volleyball2.jpg');
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width:100%;
+    width: auto;
+    height: auto;
+    opacity:0.6;
+
+    }
+
+.title {
+  color: black;
+  font-size: 3rem; 
+  letter-spacing: .065em;
+  font-weight: bolder;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  
+}
+
+
+.intro {
+  font-size: 2rem; 
+  font-weight: bolder;
+  line-height: 1.6; 
+  text-align:center; 
+  padding-top: 0px; 
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+  color:black;
+  font-weight: bolder;
+  
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+  
+}
+
+.callout {
+  font-size: 1.25em;
+  
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background:lightgray;
+  color:black;
+  font-size: 1rem;
+  font-weight:bolder;
+}
+
+.t-border {
+  
+  text-align: center; 
+
+
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content
+ {
+  /*width: 75%;*/
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.secondary-content {
+}
+
+.choices {
+  color: black;
+  text-align: center;
+  padding: 6% 15%;
+  }
+
+.excite {
+background:lightgray;
+text-align:center;
+border-radius: 10px;
+
+}
+
+.prep{
+background:lightgray;
+text-align:center;
+border-radius: 10px;
+margin-right:10px;
+  }
+
+.spoiler {
+  
+  margin: 0 auto ; 
+  border-radius: 5px;
+  
+  text-align: center;
+  font-size: 24px
+  font-weight: bolder;
+  color:red;
+}
+.spoiler span {
+  font-size: 30px;
+  font-weight: bolder;
+  color:red;
+}
+
+/* Floated Columns ------------------ */
+
+.excite li {
+  text-align:left;
+  color:black;
+  font-weight:bold;
+}
+
+.excite p {
+  text-align:left;
+  color:black;
+  font-weight:bold;
+  margin-left: 10px;
+}
+
+.prep li {
+  text-align:left;
+  color:black;
+  font-weight:bold;
+  
+}
+
+.prep p {
+  text-align:left;
+  color:black;
+  font-weight:bold;
+  margin-left: 10px;
+}
+
+.excite,
+.prep {
+  width: 46.5%;
+
+}
+
+.prep {
+  float: left;
+}
+
+.excite {
+  float: right;
+
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries -------------------- */
+
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content,
+  .spoiler span,
+   /* {width: 90%;}*/
+
+  .choices,
+  button {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+#wrapper {
+    background:lightgray;
+  }
+  .primary-content,
+  .secondary-content,
+  .spoiler span, 
+  button {
+    
+    padding: 20px;
+    border-top: none;
+    font-size: 1.5rem;
+  }
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+
+  }
+  .title {
+    font-size: 2rem;
+    border: none;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    border: none;
+  }
+
+   .choices {
+    font-size: .8rem;
+    border: none;
+  }
+
+  span {                
+    font-size: 1rem;    
+    line-height: 1.1;
+  }
+  .arrow {
+    display: none;
+  }
+  .intro,.spoiler{
+    font-size: 1.5rem;
+  }
+  .excite,
+  .prep {
+    float: none;
+    width: 100%;}
+    
+    
+
+  .excite li,.prep li{
+    font-size:1rem;
+  }
+
+  .excite p, .prep p {
+     font-size:1.5rem;
+  }
+
+  .excite h3, .prep h3 {
+     font-size:2rem;
+  }
+ 
+  .main-footer {
+    padding: 20px 0;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
